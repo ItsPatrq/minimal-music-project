@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div class="post">
+
+    <div class="content-container {{ page.category }}">
+        
+        <header>
+            <h1>{{ page.title }}</h1>
+            {% if page.image %}
+                <figure class="post-cover">
+            <!-- TODO: Images for diffrent screen size -->
+                    <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" class="post-cover_image" />
+                </figure>
+            {% endif %}
+            <p class="post-metadata">
+                {{ page.date | date_to_string }}
+            </p>
+
+        </header>
+        <div class="post-content">
+            {{ content }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    {% if site.data.metaData.cookies.enabled %}
+      <script>
+        {% include cookies.js %}
+      </script>
+    {% endif %}
+    {% include common-head.html %}
+  </head>
+  <body>
+    {% include menu.html %}
+      <main class="content-layout">
+          {{ content }}
+          {% include footer.html %}
+      </main>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$menu-size: 200px;
+$minimal-menu-size: 50px;
+$gap: 30px;
+$pop-ups-z-1: 100;
+
+$content-width-desktop: calc(100% - #{$menu-size});
+$content-width-desktop-minimal-menu: calc(100% - #{$minimal-menu-size});
+
+@mixin tablet {
+    @media only screen and (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+      @content;
+    }
+  }
+  
+@mixin desktop {
+    @media only screen and (min-width: #{$desktop-width}) {
+      @content;
+    }
+}
+
+@mixin mobile {
+    @media only screen and (max-device-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}

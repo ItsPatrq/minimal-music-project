@@ -1,0 +1,19 @@
+menu_pages:
+- title: Home
+  url: /
+  category: home
+
+- title: Discography
+  url: /discography.html
+  category: discography
+  tooltip: Discography tooltip
+
+- title: Collaborations
+  url: /collaborations.html
+  category: collaborations
+  tooltip: Collaborations tooltip
+
+- title: About
+  url: about.html
+  category: about
+  tooltip: This is about

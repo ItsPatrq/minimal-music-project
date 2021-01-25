@@ -1,0 +1,35 @@
+<aside class="menu">
+    <div class="menu-top">
+        <div class="menu-top_logo">
+            <a href="{{ '/' | relative_url }}" >
+                <img src="{{ site.data.metaData.logo | relative_url }}" alt="Logo" onerror="this.style.display='none'">
+            </a>
+        </div>
+        <ul class="navigation">
+            {% for menu_item in site.data.menu.menu_pages %}
+            <li>
+                <a href="{{ menu_item.url | relative_url }}" category="{{ menu_item.category }}" title="{{ menu_item.tooltip }}">
+                    <span>{{ menu_item.title }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</aside>
+
+<script>
+    (function() {
+        window.addEventListener("load", () => {
+            const navigation = document.getElementsByClassName("navigation")[0];
+            const selectedCategory = navigation.getElementsByTagName("a");
+            const currCategory = "{{ page.category }}";
+            
+            for(menuItem of selectedCategory) {
+                if(menuItem.getAttribute("category") === currCategory) {
+                    menuItem.classList.add("selected");
+                    return;
+                }
+            }
+        });
+    })();
+</script>

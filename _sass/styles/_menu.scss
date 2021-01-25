@@ -1,0 +1,78 @@
+.menu {
+    $root: &;
+    background-color: $white;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    float: left;
+    width: $menu-size;
+    box-sizing: border-box;
+    padding: 8px 0 0 22px;    
+    @include mobile {
+        flex-direction: row;
+        width: 100%;
+        height: $menu-size;
+    }
+    
+    &-top {
+        box-sizing: border-box;
+        height: 100%;
+        flex-grow: 1;
+        padding-left: 3px;
+        padding-right: 3px;
+        @include mobile {
+            padding: 3px 10px 3px 10px;
+        }
+
+        &_logo {
+            max-width: 100px;
+            a {
+                color: #000000;
+                img {
+                    max-height: 100%;
+                    width: auto;
+                    max-width: 100%;
+                    border: 0;
+                }
+            }
+        }
+    }
+    ul {
+        li {
+            list-style: none;
+            margin-bottom: 8px;
+            margin-top: 8px;
+
+            a {
+                align-items: flex-start;
+                color: $p_text;
+                cursor: pointer;
+                display: flex;
+                font-weight: 400;
+                letter-spacing: 3px;
+                
+                &:hover {
+                    color: $black;
+
+                }
+                &.selected {
+                    font-weight: 600;
+                }
+                @include mobile {
+                    height: calc(#{$menu-size} - 10px);
+                    width: $menu-size;
+                    font-size: 30px;
+                }
+
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

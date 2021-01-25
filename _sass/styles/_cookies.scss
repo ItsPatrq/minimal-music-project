@@ -1,0 +1,53 @@
+.cookie-container {
+    position: fixed;
+    padding: 20px 15px;
+    z-index: $pop-ups-z-1;
+    background-image: radial-gradient(farthest-corner at 25% 0, $black, $black);
+    box-shadow: 0 0 6px 0 $black;
+    text-align: center;
+    opacity: 0.95;
+    -webkit-transition: opacity 800ms, visibility 800ms;
+    transition: opacity 800ms, visibility 800ms;
+    bottom: 30px;
+    left: 40px;
+    max-width: 300px;
+    border-radius: 3px;
+    border: 3px solid $black;
+
+    p {
+        color: $p_text;
+        line-height: 1.6em;
+        margin-bottom: 10px;
+    }
+    &.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+    button {
+        line-height: 1.4;
+        font-weight: 700;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: $black;
+        color: $p_text;
+        border: none;
+        border-radius: 3px;
+        text-decoration: none;
+        cursor: pointer;
+        -webkit-transition: background-color 200ms;
+        transition: background-color 200ms;
+        &:hover {
+            background-color: $black;
+        }
+    }
+    @include mobile {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 12px 10px;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+    }
+}
