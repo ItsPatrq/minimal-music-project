@@ -4,10 +4,11 @@ category: home
 ---
 <div class="content-container">
     <div class="post-feed">
+        {{ content }}
         {% for post in site.posts %}
-            {% if post.category == page.category %}
+            {% if post.category contains page.category %}
+                <hr>
                 <article>
-                    <hr>
                     <header>
                         <p class="article-date">{{ post.date | date: "%Y-%m-%d" }}</p>
                         <h2>

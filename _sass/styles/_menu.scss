@@ -13,11 +13,6 @@
     width: $menu-size;
     box-sizing: border-box;
     padding: 8px 0 0 22px;    
-    @include mobile {
-        flex-direction: row;
-        width: 100%;
-        height: $menu-size;
-    }
     
     &-top {
         box-sizing: border-box;
@@ -25,9 +20,6 @@
         flex-grow: 1;
         padding-left: 3px;
         padding-right: 3px;
-        @include mobile {
-            padding: 3px 10px 3px 10px;
-        }
 
         &_logo {
             max-width: 100px;
@@ -62,11 +54,6 @@
                 }
                 &.selected {
                     font-weight: 600;
-                }
-                @include mobile {
-                    height: calc(#{$menu-size} - 10px);
-                    width: $menu-size;
-                    font-size: 30px;
                 }
 
                 i {

@@ -30,7 +30,7 @@ body {
 }
 main {
     .content-container {
-        margin: 0px auto;
+        margin: 4em auto 0 auto;
         width: 90%;
         padding: 0px 18px 24px;
         flex-grow: 1;
@@ -58,6 +58,11 @@ a, p, li {
     font-size: 1.1em;
 }
 
+hr {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -79,4 +84,8 @@ img {
             padding: 0px 9px 12px;
         }
     }
+}
+
+audio {
+    max-width: 100%;
 }

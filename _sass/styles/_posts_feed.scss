@@ -1,7 +1,6 @@
 $image-dim: 192px;
 
 .post-feed {
-    margin-top: 4em;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -10,10 +9,6 @@ $image-dim: 192px;
     color: $p_text;
     article {
         width: 100%;
-    }
-    hr {
-        margin-top: 2em;
-        margin-bottom: 0.5em;
     }
     .page-summary {
         flex: 0;
@@ -46,6 +41,7 @@ $image-dim: 192px;
         width: max-content;
         margin: auto;
         margin-bottom: 0.5em;
+        max-width: 100%;
     }
 
     &_image {

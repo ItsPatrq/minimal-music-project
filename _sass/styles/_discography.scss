@@ -1,0 +1,40 @@
+.discography {
+    max-width: 100%;
+    &-album {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        &_cover {
+            width: 20vw;
+            height: 20vw;
+            border: 1px solid #CCC;
+            &-wrapper {
+                display: block;
+                margin-right: 0.5em;
+            }
+        }
+        p, a {
+            font-size: 0.9em;
+            line-height: 1em;
+            font-weight: 300;
+            padding-bottom: 0.5em;
+        }
+
+        &_title {
+            margin-top: 4vw;
+            font-size: 2em;
+            margin-bottom: 0.6em;
+        }
+
+        &_summary {
+            margin-bottom: 1em;
+        }
+
+        &_more {
+            position: absolute;
+            right: 10px;
+            font-size: 1em;
+            bottom: 0;
+        }
+    }
+}

@@ -1,6 +1,111 @@
 ---
 layout: default
 ---
-<div class="discography">
-    <h1>{{ page.title }}</h1>
+<div class="content-container">
+    <div class="discography">
+        {{ content }}
+        {% for post in site.posts %}
+        {% if post.categories contains page.category %}
+        <hr>
+        <article class="discography-album">
+            <header>
+                <figure class="discography-album_cover-wrapper">
+                    <div class="discography-album_cover">
+                        <img src="{{ post.image | relative_url }}" alt="{{ page.image_alt }}" />
+                    </div>
+                </figure>
+            </header>
+            <section>
+                {% if post.external_url %}
+                <a href="{{ post.external_url | relative_url }}" target="_blank">
+                    {% else %}
+                    <a href="{{ post.url | relative_url }}">
+                        {% endif %}
+                        <h2 class="discography-album_title">
+                            {{ post.title }}
+                        </h2>
+                    </a>
+                    <p class="discography-album_summary">
+                        {{ post.summary }}
+                    </p>
+
+                    <p class="discography-album_release-date">
+                        release date: {{ post.date | date_to_long_string }}
+                    </p>
+
+                    {% assign playArray = post.play | size %}
+                    {% if playArray != 0 %}
+                    <p class="discography-album_play">
+                        play:
+                        {% for play in post.play %}
+                        <a href="{{ play.url }}" target="_blank">{{ play.name }}</a>
+                        {% if forloop.last == false %}
+                        |
+                        {% endif %}
+                        {% endfor %}
+                    </p>
+                    {% endif %}
+
+                    {% assign downloadArray = post.download | size %}
+                    {% if downloadArray != 0 %}
+                    <p class="discography-album_download">
+                        download:
+                        {% for download in post.download %}
+                        <a href="{{ download.url }}" target="_blank">{{ download.name }}</a>
+                        {% if forloop.last == false %}
+                        |
+                        {% endif %}
+                        {% endfor %}
+                    </p>
+                    {% endif %}
+
+                    {% assign buyArray = post.buy | size %}
+                    {% if buyArray != 0 %}
+                    <p class="discography-album_buy">
+                        buy from:
+                        {% for buy in post.buy %}
+                        <a href="{{ buy.url }}" target="_blank">{{ buy.name }}</a>
+                        {% if forloop.last == false %}
+                        |
+                        {% endif %}
+                        {% endfor %}
+                    </p>
+                    {% endif %}
+
+                    {% assign otherArray = post.other | size %}
+                    {% if otherArray != 0 %}
+                    <p class="discography-album_other">
+                        other links:
+                        {% for other in post.other %}
+                        <a href="{{ other.url }}" target="_blank">{{ other.name }}</a>
+                        {% if forloop.last == false %}
+                        |
+                        {% endif %}
+                        {% endfor %}
+                    </p>
+                    {% endif %}
+                    {% if post.play_here %}
+                    <audio controls>
+                        <source src="{{ post.play_here.src }}" type="{{ post.play_here.type }}">
+                        Your browser does not support the audio element.
+                    </audio>
+                    {% endif %}
+
+            </section>
+            <span class="discography-album_more">
+                {% if post.external_url %}
+                <a href="{{ post.external_url | relative_url }}" target="_blank">
+                    {% else %}
+                    <a href="{{ post.url | relative_url }}">
+                        {% endif %} {% if post.external_name %}
+                        Read more on {{ post.external_name }} &rarr;
+                        {% else %}
+                        More info &rarr;
+                        {% endif %}
+                    </a>
+            </span>
+        </article>
+        {% endif %}
+        {% endfor %}
+    </div>
 </div>

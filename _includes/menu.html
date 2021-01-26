@@ -23,9 +23,12 @@
             const navigation = document.getElementsByClassName("navigation")[0];
             const selectedCategory = navigation.getElementsByTagName("a");
             const currCategory = "{{ page.category }}";
-            
-            for(menuItem of selectedCategory) {
-                if(menuItem.getAttribute("category") === currCategory) {
+            const currCategories = "{{ page.categories }}";
+
+            for(const menuItem of selectedCategory) {
+                const menuCategory = menuItem.getAttribute("category")
+                if(menuCategory === currCategory || 
+                    menuCategory === currCategories) {
                     menuItem.classList.add("selected");
                     return;
                 }
