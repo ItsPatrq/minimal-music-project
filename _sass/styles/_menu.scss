@@ -62,4 +62,24 @@
             }
         }
     }
+
+    &-contact {
+        display:flex;
+        justify-content:left;
+        margin-bottom: 1em;
+        flex-wrap: wrap;
+        a {
+            color: $p_text;
+            cursor:pointer;
+            text-align:left;
+            text-size-adjust:100%;
+            user-select:none;
+            margin-left: 4px;
+            margin-right: 4px;
+            opacity: 60%;
+            &:hover {
+                opacity: 100%;
+            }
+        }
+    }
 }

@@ -36,12 +36,12 @@
         display: list-item;
     }
 
-    &-content {
+    & &-content, & &-metadata {
         background: $white;
-        padding: 0.2em 2rem 2rem 2rem;
+        padding: 0.2em 2rem 1rem 2rem;
         border-radius: 10px;
         @include mobile {
-            padding: 0.2em 1.2rem 1.2rem 1.2rem;
+            padding: 0.2em 1.2rem 0.6rem 1.2rem;
         }
     }
 
@@ -50,19 +50,30 @@
         h1 {
             padding: 0;
             line-height: 1em;
+            margin-bottom: 0.5em;
         }
         p {
             margin: 0;
             color: $p_text;
+        }
+    }
 
-            &#{$root}-metadata {
-                font-size: 0.7em;
-                text-align: center;
+    & &-metadata {
+        text-align: left;
+        p {
+            font-size: 1em;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        a {
+            color: $p_text;
+            &:hover {
+                text-decoration: underline $p_text;
             }
         }
     }
 
-    &-cover {
+    & &-cover {
         &_image {
             display: block;
             max-width: 100%;
@@ -70,8 +81,13 @@
             background-repeat: no-repeat;
             background-size: cover;
             height: auto;
-            max-height: 84vh;
+            max-height: 65vh;
             margin: auto;
         }
+    }
+
+    a {
+        color: #19005e;
+        font-size: 1em;
     }
 }

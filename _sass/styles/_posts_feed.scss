@@ -9,6 +9,7 @@ $image-dim: 192px;
     color: $p_text;
     article {
         width: 100%;
+        position: relative;
     }
     .page-summary {
         flex: 0;

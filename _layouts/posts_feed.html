@@ -6,39 +6,50 @@ category: home
     <div class="post-feed">
         {{ content }}
         {% for post in site.posts %}
-            {% if post.category contains page.category %}
-                <hr>
-                <article>
-                    <header>
-                        <p class="article-date">{{ post.date | date: "%Y-%m-%d" }}</p>
-                        <h2>
-                            {% if post.external_url %}
-                            <a href="{{ post.external_url | relative_url }}" target="_blank">
-                            {% else %}
-                            <a href="{{ post.url | relative_url }}">
-                            {% endif %}
-                                {{ post.title }}
-                            </a>
-                        </h2>
-                    </header>
-                    <section>
-                        <figure>
-                            <img src="{{ post.image | relative_url }}" alt="{{ page.image_alt }}" class="post-feed_image" />
-                        </figure>
-                        <p>
-                            {{ post.summary }}
-                        </p>
-                    </section>
-                    <span class="article-read">
-                        {% if post.external_url %}
-                        <a href="{{ post.external_url | relative_url }}" target="_blank">
+        {% if post.categories contains page.category %}
+        <hr>
+        <article>
+            <header>
+                <p class="article-date">{{ post.date | date: "%Y-%m-%d" }}</p>
+                <h2>
+                    {% if post.external_url %}
+                    <a href="{{ post.external_url | relative_url }}" target="_blank">
                         {% else %}
                         <a href="{{ post.url | relative_url }}">
-                        {% endif %}
+                            {% endif %}
+                            {{ post.title }}
                         </a>
-                    </span>
-                </article>
-            {% endif %}
+                </h2>
+            </header>
+            <section>
+                <figure>
+                    <img src="{{ post.image | relative_url }}" alt="{{ page.image_alt }}" class="post-feed_image" />
+                </figure>
+                <p>
+                    {{ post.summary }}
+                </p>
+            </section>
+            {% include read-more.html currPost=include.currPost %}
+        </article>
+        {% else %}
+        <hr>
+        <article>
+            <header>
+                <p class="article-date">{{ post.date | date: "%Y-%m-%d" }}</p>
+                <h2>
+                    {% if post.external_url %}
+                    <a href="{{ post.external_url | relative_url }}" target="_blank">
+                        {% else %}
+                        <a href="{{ post.url | relative_url }}">
+                            {% endif %}
+                            New release: {{ post.title }}
+                        </a>
+                </h2>
+            </header>
+            {% include discography-entry.html currPost=post %}
+        </article>
+
+        {% endif %}
         {% endfor %}
     </div>
 </div>

@@ -1,0 +1,25 @@
+<article class="discography-album">
+    <header>
+        <figure class="discography-album_cover-wrapper">
+            <div class="discography-album_cover">
+                <img src="{{ include.currPost.image | relative_url }}" alt="{{ page.image_alt }}" />
+            </div>
+        </figure>
+    </header>
+    <section>
+        {% if include.currPost.external_url %}
+        <a href="{{ include.currPost.external_url | relative_url }}" target="_blank">
+            {% else %}
+            <a href="{{ include.currPost.url | relative_url }}">
+                {% endif %}
+                <h2 class="discography-album_title">
+                    {{ include.currPost.title }}
+                </h2>
+            </a>
+            <p class="discography-album_summary">
+                {{ include.currPost.summary }}
+            </p>
+            {% include discography-entry-metadata.html currPost=include.currPost %}
+        </section>
+    {% include read-more.html currPost=include.currPost %}
+</article>

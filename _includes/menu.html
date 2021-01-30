@@ -15,6 +15,14 @@
             {% endfor %}
         </ul>
     </div>
+    <div class="menu-contact">
+        {% for contact in site.data.menu.menu_contacts %}
+
+        <a href="{{ contact.url | relative_url }}" target="{{ contact.target }}">
+            <i class="{{ contact.faicon }}"></i>
+        </a>
+        {% endfor %}
+    </div>
 </aside>
 
 <script>

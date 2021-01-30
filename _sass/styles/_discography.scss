@@ -1,6 +1,6 @@
-.discography {
+.discography, .post-feed {
     max-width: 100%;
-    &-album {
+    & &-album {
         display: flex;
         flex-direction: row;
         position: relative;
@@ -18,23 +18,23 @@
             line-height: 1em;
             font-weight: 300;
             padding-bottom: 0.5em;
+            color: $p_text;
+        }
+        a:hover {
+            text-decoration: underline $p_text;
         }
 
         &_title {
-            margin-top: 4vw;
+            margin-top: 3vw;
             font-size: 2em;
             margin-bottom: 0.6em;
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         &_summary {
             margin-bottom: 1em;
-        }
-
-        &_more {
-            position: absolute;
-            right: 10px;
-            font-size: 1em;
-            bottom: 0;
         }
     }
 }
