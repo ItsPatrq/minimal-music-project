@@ -34,8 +34,8 @@
             }
         }
     }
-    ul {
-        li {
+    ul, ol, dl {
+        li, dt {
             list-style: none;
             margin-bottom: 8px;
             margin-top: 8px;

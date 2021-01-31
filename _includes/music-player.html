@@ -1,0 +1,120 @@
+<div class="audio-player" id="{{ include.audioData.src }}" >
+    <!-- Audio player inspired by https://codepen.io/EmNudge/pen/rRbLJQ -->
+    <div class="timeline">
+        <div class="progress"></div>
+    </div>
+    <div class="controls">
+        <div class="play-controller">
+            <i class="fas fa-play"></i>
+        </div>
+        <div class="time">
+            <div class="current">0:00</div>
+            <div class="divider">/</div>
+            <div class="length"></div>
+        </div>
+        <div class="name">Music Song</div>
+        <div class="volume-container">
+            <div class="volume-controller">
+                <i class="fas fa-volume-up"></i>
+            </div>
+
+            <div class="volume-slider">
+                <div class="volume-percentage"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const audioPlayer = document.getElementById("{{ include.audioData.src }}");
+    const audio = new Audio(
+        "{{ include.audioData.src | relative_url }}"
+    );
+
+    audio.addEventListener(
+        "loadeddata",
+        () => {
+            audioPlayer.querySelector(".time .length").textContent = getTimeCodeFromNum(
+                audio.duration
+            );
+            audioPlayer.querySelector(".name").textContent = "{{ include.audioData.name }}";
+            audio.volume = .75;
+        },
+        false
+    );
+
+
+    //click on timeline to skip around
+    const timeline = audioPlayer.querySelector(".timeline");
+    timeline.addEventListener("click", e => {
+        const timelineWidth = window.getComputedStyle(timeline).width;
+        const timeToSeek = e.offsetX / parseInt(timelineWidth) * audio.duration;
+        audio.currentTime = timeToSeek;
+    }, false);
+
+    //click volume slider to change volume
+    const volumeSlider = audioPlayer.querySelector(".controls .volume-slider");
+    volumeSlider.addEventListener('click', e => {
+        const sliderWidth = window.getComputedStyle(volumeSlider).width;
+        const newVolume = e.offsetX / parseInt(sliderWidth);
+        audio.volume = newVolume;
+        audioPlayer.querySelector(".controls .volume-percentage").style.width = newVolume * 100 + '%';
+    }, false)
+
+    const playBtn = audioPlayer.querySelector(".controls .play-controller i");
+    playBtn.addEventListener(
+        "click",
+        () => {
+            playBtn.classList = "fas";
+            if (audio.paused) {
+                playBtn.classList.add("fa-pause");
+                audio.play();
+            } else {
+                playBtn.classList.add("fa-play");
+                audio.pause();
+            }
+        },
+        false
+    );
+
+    const intervalId = setInterval(() => {
+        if(audio.paused) {
+            console.log("paused")
+            return;
+        }
+        const progressBar = audioPlayer.querySelector(".progress");
+        progressBar.style.width = audio.currentTime / audio.duration * 100 + "%";
+        audioPlayer.querySelector(".time .current").textContent = getTimeCodeFromNum(
+            audio.currentTime
+        );
+    }, 200);
+
+    audioPlayer.querySelector(".volume-controller").addEventListener("click", () => {
+        const volumeEl = audioPlayer.querySelector(".controls .volume-controller i");
+        audio.muted = !audio.muted;
+        volumeEl.classList = "fas";
+        if (audio.muted) {
+            volumeEl.classList.add("fa-volume-mute");
+        } else {
+            volumeEl.classList.add("fa-volume-up");
+        }
+    });
+    
+
+    /**
+     * turn 128 seconds into 2:08 
+    **/
+    function getTimeCodeFromNum(num) {
+        let seconds = parseInt(num);
+        let minutes = parseInt(seconds / 60);
+        seconds -= minutes * 60;
+        const hours = parseInt(minutes / 60);
+        minutes -= hours * 60;
+
+        if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
+        return `${String(hours).padStart(2, 0)}:${minutes}:${String(
+            seconds % 60
+        ).padStart(2, 0)}`;
+    }
+
+</script>

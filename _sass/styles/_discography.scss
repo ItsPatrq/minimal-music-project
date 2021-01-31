@@ -23,6 +23,9 @@
         a:hover {
             text-decoration: underline $p_text;
         }
+        section {
+            width: 100%;
+        }
 
         &_title {
             margin-top: 3vw;

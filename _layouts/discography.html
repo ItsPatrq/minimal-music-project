@@ -6,6 +6,7 @@ layout: default
         {{ content }}
         {% for post in site.posts %}
         {% if post.categories contains page.category %}
+        <hr>
         {% include discography-entry.html currPost=post %}
         {% endif %}
         {% endfor %}

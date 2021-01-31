@@ -12,6 +12,7 @@ play:
 play_here:
   src: assets/audio/sample_song.mp3
   type: audio/mpeg
+  name: Sample Song
 ---
 Here you can write more about a certain release, e.g. tracklist:
 1. Y
