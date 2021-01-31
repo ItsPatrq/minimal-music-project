@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Z is for Zero
-summary: This is summary of a post. It will appear in the page of it's category with the summary shown. Clicking each of them will redirect to the page of the post, the same with clicking "Read More"
+description: This is description of a post. It will appear in the page of it's category with the description shown. Clicking each of them will redirect to the page of the post, the same with clicking "Read More"
 image: assets/img/z-is-for-zero.png
 type: remix album
 play:
@@ -13,7 +13,7 @@ buy:
   - url: https://backfromvoid.bandcamp.com/track/if-i-want-you-to
     name: BandCamp
 play_bandcamp_embed:
-  src: https://bandcamp.com/EmbeddedPlayer/track=2250182265/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/
+  src: https://bandcamp.com/EmbeddedPlayer/track=2250182265/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=none/transparent=true/
   href: https://backfromvoid.bandcamp.com/track/if-i-want-you-to
   title: If I Want You To by Back From Void
 ---

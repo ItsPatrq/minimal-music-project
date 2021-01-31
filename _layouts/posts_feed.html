@@ -26,7 +26,7 @@ category: home
                     <img src="{{ post.image | relative_url }}" alt="{{ page.image_alt }}" class="post-feed_image" />
                 </figure>
                 <p>
-                    {{ post.summary }}
+                    {{ post.description }}
                 </p>
             </section>
             {% include read-more.html currPost=include.currPost %}

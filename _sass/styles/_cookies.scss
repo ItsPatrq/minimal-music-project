@@ -2,7 +2,7 @@
     position: fixed;
     padding: 20px 15px;
     z-index: $pop-ups-z-1;
-    background-image: radial-gradient(farthest-corner at 25% 0, $black, $black);
+    background-image: radial-gradient(farthest-corner at 25% 0, $white, $white);
     box-shadow: 0 0 6px 0 $black;
     text-align: center;
     opacity: 0.95;
@@ -28,16 +28,16 @@
         font-weight: 700;
         display: inline-block;
         padding: 10px 20px;
-        background-color: $black;
+        background-color: $white;
         color: $p_text;
-        border: none;
+        border: 1px solid;
         border-radius: 3px;
         text-decoration: none;
         cursor: pointer;
         -webkit-transition: background-color 200ms;
         transition: background-color 200ms;
         &:hover {
-            background-color: $black;
+            background-color: rgb(168, 168, 168);
         }
     }
     @include mobile {

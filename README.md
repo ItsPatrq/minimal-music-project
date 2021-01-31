@@ -44,8 +44,16 @@ Structure of `_data/menu.yml`:
     * tooltip: Tooltip for menu item
 
 Structure of `_data/metaData.yml`:
-author: Site Author name
-avatar_url: URL for avatar (for about page)
+* author: Site Author name
+* logo: URL for logo image  (displayed on top of menu)
+* cookies: customize information about site cookies
+    * enabled: determine if should show cookies pop-up
+    * message: text on cookie pop-up
+    * agreeButtonText: text on agree button
+
+Structure of `_data/customs.yml`:
+* custom-css: a list of urls to custom css files
+* custom-js: a list of urls to custom javascript files
 
 ## Contributing
 

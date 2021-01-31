@@ -3,6 +3,8 @@
 <link rel="stylesheet" href="{{ '/assets/styles/styles.css' | relative_url }}">
 <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
 <script src="https://kit.fontawesome.com/79c31398dc.js" crossorigin="anonymous"></script>
+
+<!-- favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/favicon-16x16.png' | relative_url }}">
@@ -12,5 +14,9 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="{{ '/assets/img/browserconfig.xml' | relative_url }}">
 <meta name="theme-color" content="#ffffff">
+
+<!-- feed -->
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "feed.xml" | relative_url }}">
+
 {% include customizations.html %}
 {% seo %}

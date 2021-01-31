@@ -28,3 +28,6 @@ menu_contacts:
 - faicon: fas fa-envelope
   url:
   target: 
+- faicon: fas fa-rss
+  url: /feed.xml
+  target: _blank

@@ -28,7 +28,11 @@
 <script>
     const audioPlayer = document.getElementById("{{ include.audioData.src }}");
     const audio = new Audio(
+        {% if include.audioData.is_relative_url %}
         "{{ include.audioData.src | relative_url }}"
+        {% else %}
+        "{{ include.audioData.src }}"
+        {% endif %}
     );
 
     audio.addEventListener(
@@ -79,7 +83,6 @@
 
     const intervalId = setInterval(() => {
         if(audio.paused) {
-            console.log("paused")
             return;
         }
         const progressBar = audioPlayer.querySelector(".progress");

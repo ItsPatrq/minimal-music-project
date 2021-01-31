@@ -74,7 +74,7 @@
         style="color: #cccccc; text-decoration: none;">{{ include.currPost.play_soundcloud_embed.song_title }}</a></div>
 {% endif %}
 {% if include.currPost.play_bandcamp_embed %}
-<iframe style="border: 0; width: 100%; height: 42px;"
-    src="{{ include.currPost.play_bandcamp_embed.src }}"
-    seamless><a href="{{ include.currPost.play_bandcamp_embed.href }}">{{ include.currPost.play_bandcamp_embed.title }}</a></iframe>
+<iframe style="border: 0; width: 100%; height: 120px;"
+    src="{{ include.currPost.play_bandcamp_embed.src }}" seamless>
+    <a href="{{ include.currPost.play_bandcamp_embed.href }}">{{ include.currPost.play_bandcamp_embed.title }}</a></iframe>
 {% endif %}

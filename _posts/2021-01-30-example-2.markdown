@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Example post 2 title should be long enough, to be a small summary as well, as just a regular title
+title: Example post 2 title should be long enough, to be a small description as well, as just a regular title
 category: home
 image: assets/img/post-2.jpg
 image_alt: Post image cover
-summary: This is summary of a post. It will appear in the page of it's category with the summary shown. Clicking each of them will redirect to the page of the post. 
+description: This is description of a post. It will appear in the page of it's category with the description shown. Clicking each of them will redirect to the page of the post. 
 ---
 [Jekyll](https://jekyllrb.com/) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur turpis nec tortor sagittis, in tincidunt lectus iaculis. Sed tempor ligula ac nulla dictum, quis luctus tortor pretium. Suspendisse vitae nibh id sapien tempus posuere eu id ante. Fusce nec neque nisl. Suspendisse velit elit, euismod et lacus a, commodo mollis ligula. Duis non nibh gravida, interdum tellus sed, aliquam libero. Ut et tempor velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 

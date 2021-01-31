@@ -94,13 +94,13 @@ audio {
 .read-more {
     position: absolute;
     right: 10px;
-    bottom: -1em;
-    font-size: 0.9em;
+    bottom: -2em;
     line-height: 1em;
     font-weight: 300;
     padding-bottom: 0.5em;
     color: #000000;
     a {
+        font-size: 0.9em;
         &:hover {
             text-decoration: underline;
         }
