@@ -35,7 +35,7 @@ main {
         padding: 0px 18px 24px;
         flex-grow: 1;
         position: relative;
-        p {
+        p, li {
             @include hyperlink-convention();
         }
         .content-separator {
@@ -56,6 +56,10 @@ a {
 
 a, p, li {
     font-size: 1.1em;
+}
+
+li {
+    margin-left: 2em;
 }
 
 hr {

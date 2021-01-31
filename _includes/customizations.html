@@ -1,15 +1,15 @@
 {% for javascript in page.custom-js %}
-    <script src="{{ javascript }}"></script>
+    <script src="{{ javascript | relative_url }}"></script>
 {% endfor %}
 
 {% for javascript in site.data.customs.custom-js %}
-    <script src="{{ javascript }}"></script>
+    <script src="{{ javascript | relative_url }}"></script>
 {% endfor %}
 
 {% for css in page.custom-css %}
-    <link href="{{ css }}" rel="stylesheet">
+    <link href="{{ css | relative_url }}" rel="stylesheet">
 {% endfor %}
 
 {% for css in site.data.customs.custom-css %}
-    <link href="{{ css }}" rel="stylesheet">
+    <link href="{{ css | relative_url }}" rel="stylesheet">
 {% endfor %}
