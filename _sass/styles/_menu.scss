@@ -13,7 +13,8 @@
     width: $menu-size;
     box-sizing: border-box;
     padding: 8px 0 0 22px;    
-    
+    overflow: hidden;
+
     &-top {
         box-sizing: border-box;
         height: 100%;
@@ -47,7 +48,6 @@
                 display: flex;
                 font-weight: 400;
                 letter-spacing: 3px;
-                
                 &:hover {
                     color: $black;
 
@@ -58,6 +58,11 @@
 
                 i {
                     margin-right: 5px;
+                }
+
+                span {
+                    max-width: 100%;
+                    hyphens: auto;
                 }
             }
         }

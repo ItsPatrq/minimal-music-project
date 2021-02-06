@@ -4,12 +4,12 @@ menu_pages:
   category: home
 
 - title: Discography
-  url: /discography.html
+  url: /discography/
   category: discography
   tooltip: Discography tooltip
 
 - title: Collaborations
-  url: /collaborations.html
+  url: /collaborations/
   category: collaborations
   tooltip: Collaborations tooltip
 

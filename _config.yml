@@ -14,9 +14,20 @@ twitter:
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate-v2
 # Build settings
 markdown: kramdown
 remote_theme: ItsMeaga1n/minimal-music-project
+permalink: /:title.html
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 # Exclude these files from production site
 exclude:
   - CHANGELOG.md
