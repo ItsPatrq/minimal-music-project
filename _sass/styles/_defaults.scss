@@ -9,8 +9,8 @@ h1 {
     padding: 0.5em;
 }
 
-h2, h2, h3 a {
-    font-weight: 600;
+h2, h3 a {
+    font-weight: 500;
     font-size: 1.4em;
     line-height: 1.4em;
     color: $black;
@@ -44,6 +44,30 @@ main {
             width: 100%;
             &:last-child {
                 margin: $gap auto 0 auto;
+            }
+        }
+    }
+
+    .pager {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        li {
+            position: absolute;
+            display: inline;
+            padding: 8px;
+            margin: 10px;
+            &.previous {
+                left: 0;
+            }
+            &.next {
+                right: 0;
+            }
+            & > a {
+                color: $p_text;
+                &:hover {
+                    text-decoration: underline $black;
+                }
             }
         }
     }
@@ -108,18 +132,5 @@ audio {
         &:hover {
             text-decoration: underline;
         }
-    }
-}
-
-.pager {
-    ul {
-        text-align: center;
-        list-style: none; 
-    }
-    li {
-        display: inline;
-        border: 1px solid black;
-        padding: 10px;
-        margin: 5px;
     }
 }

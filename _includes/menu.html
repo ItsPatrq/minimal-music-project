@@ -8,7 +8,11 @@
         <ul class="navigation">
             {% for menu_item in site.data.menu.menu_pages %}
             <li>
-                <a href="{{ menu_item.url | relative_url }}" category="{{ menu_item.category }}" title="{{ menu_item.tooltip }}">
+                <a href="{{ menu_item.url | relative_url }}" category="{{ menu_item.category }}" title="{{ menu_item.tooltip }}"
+                {% if menu_item.category == page.category or page.categories contains menu_item.category %}
+                    class="selected"
+                {% endif %}
+                >
                     <span>{{ menu_item.title }}</span>
                 </a>
             </li>
@@ -24,23 +28,3 @@
         {% endfor %}
     </div>
 </aside>
-
-<script>
-    (function() {
-        window.addEventListener("load", () => {
-            const navigation = document.getElementsByClassName("navigation")[0];
-            const selectedCategory = navigation.getElementsByTagName("a");
-            const currCategory = "{{ page.category }}";
-            const currCategories = "{{ page.categories }}";
-
-            for(const menuItem of selectedCategory) {
-                const menuCategory = menuItem.getAttribute("category")
-                if(menuCategory === currCategory || 
-                    menuCategory === currCategories) {
-                    menuItem.classList.add("selected");
-                    return;
-                }
-            }
-        });
-    })();
-</script>

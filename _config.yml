@@ -22,14 +22,12 @@ remote_theme: ItsMeaga1n/minimal-music-project
 permalink: /:title.html
 pagination:
   enabled: true
-  per_page: 5
-  permalink: '/page/:num/'
-  title: ' - page :num'
+  per_page: 4
   limit: 0
   sort_field: 'date'
   sort_reverse: true
-# Exclude these files from production site
-exclude:
+
+  exclude:
   - CHANGELOG.md
   - CNAME
   - Gemfile

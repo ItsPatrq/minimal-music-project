@@ -5,7 +5,7 @@ category: home
 <div class="content-container">
     <div class="post-feed">
         {{ content }}
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
         {% if post.categories contains page.category %}
         <hr>
         <article>
@@ -51,5 +51,6 @@ category: home
 
         {% endif %}
         {% endfor %}
+        {% include pagination-buttons.html %}
     </div>
 </div>

@@ -19,11 +19,11 @@
         box-sizing: border-box;
         height: 100%;
         flex-grow: 1;
-        padding-left: 3px;
         padding-right: 3px;
 
         &_logo {
             max-width: 100px;
+            margin-bottom: 1em;
             a {
                 color: #000000;
                 img {
@@ -37,6 +37,7 @@
     }
     ul, ol, dl {
         li, dt {
+            margin-left: 0;
             list-style: none;
             margin-bottom: 8px;
             margin-top: 8px;
@@ -48,6 +49,7 @@
                 display: flex;
                 font-weight: 400;
                 letter-spacing: 3px;
+                font-size: 1em;
                 &:hover {
                     color: $black;
 
@@ -71,7 +73,7 @@
     &-contact {
         display:flex;
         justify-content:left;
-        margin-bottom: 1em;
+        margin-bottom: 0.6em;
         flex-wrap: wrap;
         a {
             color: $p_text;

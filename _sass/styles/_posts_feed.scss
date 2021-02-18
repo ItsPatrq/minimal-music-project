@@ -46,4 +46,14 @@ $image-dim: 192px;
         border: 0;
         margin: auto;
     }
+
+
+    .discography-album {
+        &_title {
+            display: none;
+        }
+        &_summary {
+            margin-top: 3vw;;
+        }
+    }
 }
