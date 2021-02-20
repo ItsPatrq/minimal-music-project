@@ -111,7 +111,7 @@
                 font-size: 1em;
                 &:hover {
                     color: $black;
-
+                    text-decoration: underline;
                 }
                 &.selected {
                     font-weight: 600;
