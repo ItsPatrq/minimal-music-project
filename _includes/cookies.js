@@ -2,10 +2,10 @@
     const consentPropName = "cookies_consent";
     const storageType = localStorage;
 
-    shouldShowCookieConsent = () => !storageType.getItem(consentPropName);
+    areCookiesAccepted = () => storageType.getItem(consentPropName);
     acceptCookieConsent = () => storageType.setItem(consentPropName, true);
     window.addEventListener("load", () => {
-        if(!shouldShowCookieConsent()) {
+        if(areCookiesAccepted()) {
             return;
         }
         const cookieContainer = document.createElement("div");
