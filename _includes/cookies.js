@@ -19,6 +19,12 @@
             acceptCookieConsent();
             cookieContainer.classList.add("hidden");
             window.setTimeout(cookieContainer.remove.bind(cookieContainer), 1000);
+            window.setTimeout(cookieContainer.remove.bind(cookieContainer), 1000);
+            try {
+                {{ site.data.metaData.cookies.agreeButtonFnName }}();
+            } catch(e) {
+                console.error(e);
+            }
         }
         cookieParagraph.append(cookieContent);
         cookieContainer.append(cookieParagraph, cookieAgreeButton);
