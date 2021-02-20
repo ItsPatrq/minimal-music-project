@@ -1,0 +1,7 @@
+{% for css in page.custom-css %}
+    <link href="{{ css | relative_url }}" rel="stylesheet">
+{% endfor %}
+
+{% for css in site.data.customs.custom-css %}
+    <link href="{{ css | relative_url }}" rel="stylesheet">
+{% endfor %}

@@ -22,14 +22,14 @@
     &.expanded {
         z-index: 10;
         .menu-top_expand  {
-                .bar1 {
+                .bar_top {
                     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
                     transform: rotate(-45deg) translate(-9px, 6px);
                   }
                   
-                  .bar2 {opacity: 0;}
+                  .bar_middle {opacity: 0;}
                   
-                  .bar3 {
+                  .bar_bottom {
                     -webkit-transform: rotate(45deg) translate(-8px, -8px);
                     transform: rotate(45deg) translate(-8px, -8px);
               }
@@ -82,9 +82,9 @@
             cursor: pointer;
             flex-grow: 0;
             position: absolute;
-            right: 5px;
+            right: 10px;
             top: 15px;
-            .bar1, .bar2, .bar3 {
+            .bar_top, .bar_middle, .bar_bottom {
                 width: 35px;
                 height: 5px;
                 background-color: #333;
