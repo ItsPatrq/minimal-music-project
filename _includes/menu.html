@@ -5,6 +5,11 @@
                 <img src="{{ site.data.metaData.logo | relative_url }}" alt="Logo" onerror="this.style.display='none'">
             </a>
         </div>
+        <div class="menu-top_expand" onclick="toggleExpander(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
         <ul class="navigation">
             {% for menu_item in site.data.menu.menu_pages %}
             <li>

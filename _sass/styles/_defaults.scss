@@ -72,12 +72,12 @@ main {
         }
     }
 }
+
 a {
     text-decoration-line: none;
     color: inherit;
     transition: all 0.4s ease-in-out 0s;
 }
-
 a, p, li {
     font-size: 1.1em;
 }
@@ -112,6 +112,7 @@ img {
         .content-container {
             width: 100%;
             padding: 0px 9px 12px;
+            margin-top: 0;
         }
     }
 }

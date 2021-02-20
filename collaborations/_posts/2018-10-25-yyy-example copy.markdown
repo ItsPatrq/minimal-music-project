@@ -9,10 +9,7 @@ play:
       url: https://www.youtube.com/watch?v=X3jUuQVuD0w
     - name: SoundCloud
       url: https://soundcloud.com/back-from-void/celldweller-my-disintegration-bfv-remix
-play_here:
-  src: assets/audio/sample_song.mp3
-  name: Sample Song
-  is_relative_url: true
+
 ---
 Here you can write more about a certain release, e.g. tracklist:
 1. Y

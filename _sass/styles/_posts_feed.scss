@@ -7,6 +7,13 @@ $image-dim: 192px;
     justify-content: flex-start;
     align-items: flex-start;
     color: $p_text;
+    hr {
+        @include mobile {
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+    }
     article {
         width: 100%;
         position: relative;

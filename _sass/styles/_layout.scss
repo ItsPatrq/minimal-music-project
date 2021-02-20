@@ -13,10 +13,10 @@ main {
     left: $menu-size;
     top: 0;
     @include mobile {
-        top: $menu-size;
+        top: $mobile-menu-height;
         left: 0;
         width: 100%;
-        height: calc(100% - #{$menu-size});
+        height: calc(100% - #{$mobile-menu-height});
     }
     &.no-menu {
         width: 100%;
