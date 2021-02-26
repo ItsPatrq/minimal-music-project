@@ -109,8 +109,9 @@
                 letter-spacing: 3px;
                 font-size: 1em;
                 &:hover {
-                    color: $black;
-                    text-decoration: underline;
+                    transition: all 0.3s ease-in-out 0s;
+                    color: $p_light;
+                    text-decoration: none;
                 }
                 &.selected {
                     font-weight: 600;

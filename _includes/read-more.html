@@ -3,7 +3,8 @@
     <a href="{{ include.currPost.external_url | relative_url }}" target="_blank">
         {% else %}
         <a href="{{ include.currPost.url | relative_url }}">
-            {% endif %} {% if include.currPost.external_name %}
+            {% endif %} 
+            {% if include.currPost.external_name %}
             Read more on {{ include.currPost.external_name }} &rarr;
             {% else %}
             More info &rarr;

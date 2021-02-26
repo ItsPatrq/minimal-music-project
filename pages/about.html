@@ -37,13 +37,18 @@ category: about
 
 <style>
     a {
-      transition: all 300ms ease 0s;
-      cursor: pointer;
-      text-decoration-line: none;
-      color: #290099;
-  }
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: 0.4s;
+        -webkit-text-decoration-color: transparent;
+        -moz-text-decoration-color: transparent;
+        cursor: pointer;
+        color: #290099;
+    }
   a:hover {
-        text-decoration: underline #290099;
-
+        text-decoration-color: #290099;
+        transition: 0.4s;
+        -webkit-text-decoration-color: #290099;
+        -moz-text-decoration-color: #290099;
       }
 </style>

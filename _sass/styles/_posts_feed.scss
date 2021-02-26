@@ -29,8 +29,15 @@ $image-dim: 192px;
     }
     a {
         line-height: 1.1em;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: 0.4s;
+        -webkit-text-decoration-color: transparent;
+        -moz-text-decoration-color: transparent;
         &:hover {
-            text-decoration: underline $black;
+            text-decoration-color: $black;
+            -webkit-text-decoration-color: $black;
+            -moz-text-decoration-color: $black;
         }
     }
     .article-date {

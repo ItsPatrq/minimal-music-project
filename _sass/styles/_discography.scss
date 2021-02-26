@@ -22,8 +22,8 @@
             padding-bottom: 0.5em;
             color: $p_text;
         }
-        a:hover {
-            text-decoration: underline $p_text;
+        a {
+            @include underline-on-hover($p_text);
         }
         section {
             width: 100%;
@@ -33,9 +33,7 @@
             margin-top: 3vw;
             font-size: 2em;
             margin-bottom: 0.6em;
-            &:hover {
-                text-decoration: underline;
-            }
+            @include underline-on-hover($p_text);
         }
 
         &_summary {

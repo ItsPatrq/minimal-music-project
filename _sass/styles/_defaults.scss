@@ -65,9 +65,7 @@ main {
             }
             & > a {
                 color: $p_text;
-                &:hover {
-                    text-decoration: underline $black;
-                }
+                @include underline-on-hover($black);
             }
         }
     }
@@ -131,8 +129,6 @@ audio {
     color: #000000;
     a {
         font-size: 0.9em;
-        &:hover {
-            text-decoration: underline;
-        }
+        @include underline-on-hover($black);
     }
 }

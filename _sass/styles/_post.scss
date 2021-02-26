@@ -67,9 +67,7 @@
         }
         a {
             color: $p_text;
-            &:hover {
-                text-decoration: underline $p_text;
-            }
+            @include underline-on-hover($p_text);
         }
     }
 

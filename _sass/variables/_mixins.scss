@@ -1,3 +1,16 @@
+@mixin underline-on-hover($underline-color) {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 0.4s;
+  -webkit-text-decoration-color: transparent;
+  -moz-text-decoration-color: transparent;
+  &:hover {
+    text-decoration-color: $underline-color;
+    -webkit-text-decoration-color: $underline-color;
+    -moz-text-decoration-color: $underline-color;
+  }
+}
+
 @mixin tooltip {
     position: relative;
     &:hover .tooltip {
@@ -35,13 +48,8 @@
 
 @mixin hyperlink-convention {
     a {
-      transition: all 300ms ease 0s;
       cursor: pointer;
-      text-decoration-line: none;
+      @include underline-on-hover($hyperlink);
       color: $hyperlink;
-      &:hover {
-        text-decoration: underline $hyperlink;
-
-      }
   }
 }
