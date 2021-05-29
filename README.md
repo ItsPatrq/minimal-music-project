@@ -1,40 +1,56 @@
 # [minimal-music-project Jekyll theme](https://github.com/ItsMeaga1n/minimal-music-project/)
 
-[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE)
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/itsmeaga1n/minimal-music-project/master/LICENSE.txt)
 [![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.9-blue.svg)](https://jekyllrb.com/)
 [![Gem Version](https://badge.fury.io/rb/minimal-music-project.svg)](https://badge.fury.io/rb/minimal-music-project)
+<a href="https://ko-fi.com/itsmeaga1n">
+  <img height="20" src="https://www.ko-fi.com/img/githubbutton_sm.svg"
+    alt="Donate (Ko-fi)" />
+</a>
 
-minimal-music-project is a flexible Jekyll theme, designed for sites with content easily aggregated into categories. Demo is available [here](https://itsmeaga1n.github.io/minimal-music-project/).
+minimal-music-project is a flexible, extendable Jekyll theme. With this theme it's plain simple to create a good looking website for a music band with all the required components to list all releases and news. Demo is available [here](https://minimal-music-project.netlify.app/).
 
 ![layout examples](screenshot.png)
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+There are three ways to install:
 
-```ruby
-gem "minimal-music-project"
-```
+* As a ruby gem theme:
 
-And add this line to your Jekyll site's `_config.yml`:
+    Add this line to your Jekyll site's `Gemfile`:
 
-```yaml
-theme: minimal-music-project
-```
+    ```ruby
+    gem "minimal-categorized"
+    ```
 
-And then execute:
+    And add this line to your Jekyll site's `_config.yml`:
 
-    $ bundle
+    ```yaml
+    theme: minimal-categorized
+    ```
 
-Or install it yourself as:
+    And then execute:
 
-    $ gem install minimal-music-project
+        $ bundle
+
+    Or install it yourself as:
+
+        $ gem install minimal-categorized
+
+* As a remote theme (GitHub Pages compatible)
+    
+    In your Jekyll site's _config.yml remove other themes and add this entry:
+    ```
+    remote_theme: ItsMeaga1n/minimal-categorized
+    ```
+
+* Forking/directly copying all of the theme files into your project.
 
 ## Usage
+This theme uses pager plugin  `jekyll-paginate-v2` for pagination and `jekyll-seo-tag` for seo tags. It can be configured in main _config file.
 
-This theme is based on separating content into categories, which is later shown on separated sites designated to the specific content type.
-
-As for now, theme allows to use two main categories that will be displayed on home screen and more categories displayed only in menu to further separate content. Those are defined in `_data/menu.yml`.
+Configuration via .yml files
 
 Structure of `_data/menu.yml`:
 * menu_pages: a list of items in menu. Each item contains information:
@@ -42,14 +58,21 @@ Structure of `_data/menu.yml`:
     * url: URL for href
     * category: unique identifier of category. Used to determine which menu item is selected
     * tooltip: Tooltip for menu item
+* menu_contacts: a list of items to be displayed for a contact section in menu
+    * faicon: FavIcon to be displayed in menu
+    * url: URL for href
+    * target: target value of \<a> tag
+
 
 Structure of `_data/metaData.yml`:
 * author: Site Author name
-* logo: URL for logo image  (displayed on top of menu)
+* logo: relative url to the logo
 * cookies: customize information about site cookies
     * enabled: determine if should show cookies pop-up
     * message: text on cookie pop-up
     * agreeButtonText: text on agree button
+    * agreeButtonFnName: function in the `window` scope to execute on cookie agree
+
 
 Structure of `_data/customs.yml`:
 * custom-css: a list of urls to custom css files
