@@ -1,4 +1,4 @@
-# [minimal-music-project Jekyll theme](https://github.com/ItsMeaga1n/minimal-music-project/)
+<h1><a href="https://github.com/ItsMeaga1n/minimal-music-project/"><img src="https://raw.githubusercontent.com/ItsMeaga1n/minimal-music-project/master/assets/img/favicon.ico" height="21" alt="minimal-categorized logo" /> minimal-music-project Jekyll theme </h1></a>
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/itsmeaga1n/minimal-music-project/master/LICENSE.txt)
 [![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.9-blue.svg)](https://jekyllrb.com/)
@@ -10,7 +10,7 @@
 
 minimal-music-project is a flexible, extendable Jekyll theme. With this theme it's plain simple to create a good looking website for a music band with all the required components to list all releases and news. Demo is available [here](https://minimal-music-project.netlify.app/).
 
-![layout examples](screenshot.png)
+![layout examples](https://raw.githubusercontent.com/ItsMeaga1n/minimal-music-project/master/screenshot.png)
 
 ## Installation
 
