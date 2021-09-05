@@ -46,6 +46,11 @@ main {
                 margin: $gap auto 0 auto;
             }
         }
+        fieldset {
+            border: none;
+            padding: 0;
+            margin-bottom: 1em;
+        }
     }
 
     .pager {

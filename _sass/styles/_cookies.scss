@@ -23,22 +23,30 @@
         opacity: 0;
         visibility: hidden;
     }
-    button {
-        line-height: 1.4;
-        font-weight: 700;
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: $white;
-        color: $p_text;
-        border: 1px solid;
-        border-radius: 3px;
-        text-decoration: none;
-        cursor: pointer;
-        -webkit-transition: background-color 200ms;
-        transition: background-color 200ms;
-        &:hover {
-            background-color: rgb(168, 168, 168);
-        }
+    &--buttons {
+        display: flex;
+        button {
+            line-height: 1.4;
+            font-weight: 700;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: $white;
+            color: $p_text;
+            border: 1px solid;
+            border-radius: 3px;
+            text-decoration: none;
+            cursor: pointer;
+            -webkit-transition: background-color 200ms;
+            transition: background-color 200ms;
+            &:hover {
+                background-color: rgb(168, 168, 168);
+            }
+            width: calc(50% - 10px);
+            &:last-of-type {
+                margin-left: 10px;
+            }
+    }
+    
     }
     @include mobile {
         bottom: 0;

@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="content-container cookies">
+    {{ content }}
+    <hr />
+    <h2>Consents</h2>
+    {% for consent in site.data.metaData.cookies.consent %}
+    <fieldset>
+        <input type="checkbox" id="{{ consent.name }}">
+        <label for="{{ consent.name }}">
+            <strong>{{ consent.name }}</strong>
+            {{ consent.description }}
+        </label>
+    </fieldset>
+    {% endfor %}
+</div>
+<script>
+    console.log("TODO: Cookie management script");
+</script>
