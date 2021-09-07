@@ -71,8 +71,14 @@ Structure of `_data/metaData.yml`:
     * enabled: determine if should show cookies pop-up
     * message: text on cookie pop-up
     * agreeButtonText: text on agree button
+    * disagreeButtonText: text on disagree button
     * agreeButtonFnName: function in the `window` scope to execute on cookie agree
-
+    * disagreeButtonFnName: function in the `window` scope to execute on cookie disagree
+    * header: title of the pop-up window
+    * consent: list of objects that will be rendered on a site with "cookies" layout for acceptance. Each object needs to have:
+        * name: bolded on render
+        * description: description of the cookie
+        * cookieName: under what name it will be saved in the local storage (selected checkbox as "true", unselected as "false")
 
 Structure of `_data/customs.yml`:
 * custom-css: a list of urls to custom css files

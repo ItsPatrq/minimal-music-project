@@ -12,4 +12,6 @@ cookies:
     - name: Google Analytics
       description: some description describing the purpose of this consent as well as what it will collect and where send
       cookieName: GA
-
+    - name: Some other cookie
+      description: some description describing the purpose of this consent as well as what it will collect and where send
+      cookieName: SA
