@@ -102,6 +102,13 @@ img {
     margin: 0;
     vertical-align: top;
     object-fit: cover;
+    &[click-to-enlarge] {
+        cursor: zoom-in;
+        &:hover {
+            box-shadow: 0 0 8px $black;
+            transition: all 0.4s ease-in-out 0.2s;
+        }
+    }
 }
 
 @include mobile {
