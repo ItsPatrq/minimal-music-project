@@ -78,3 +78,7 @@
     src="{{ include.currPost.play_bandcamp_embed.src }}" seamless>
     <a href="{{ include.currPost.play_bandcamp_embed.href }}">{{ include.currPost.play_bandcamp_embed.title }}</a></iframe>
 {% endif %}
+{% if include.currPost.play_anchorFm_embed %}
+<iframe src="{{ include.currPost.play_anchorFm_embed.src }}"
+    height="102px" width="400px" frameborder="0" scrolling="no">
+{% endif %}

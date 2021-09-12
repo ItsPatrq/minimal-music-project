@@ -5,6 +5,7 @@
     window.addEventListener("load", () => {
         const images = document.querySelectorAll("img[click-to-enlarge]");
         images.forEach(img => {
+            {% if site.data.metaData.clickToEnlargeImages %}
             img.addEventListener("click", () => {
                 const src = img.attributes.getNamedItem("src");
                 console.log(src)
@@ -22,6 +23,9 @@
                     }
                 }, {once : true})
             });
+            {% else %}
+            img.removeAttribute("click-to-enlarge");
+            {% endif %}
         });
     })
 })();
