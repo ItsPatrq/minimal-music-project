@@ -13,6 +13,11 @@ play_here:
   src: assets/audio/sample_song.mp3
   name: Sample Song
   is_relative_url: true
+embed_player:
+  type: audio_file
+  src: assets/audio/sample_song.mp3
+  name: Sample Song
+  is_relative_url: true
 ---
 Here you can write more about a certain release, e.g. tracklist:
 1. Y

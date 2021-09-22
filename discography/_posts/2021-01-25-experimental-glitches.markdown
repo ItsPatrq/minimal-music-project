@@ -9,12 +9,9 @@ play:
       url: https://www.youtube.com/watch?v=X3jUuQVuD0w
     - name: SoundCloud
       url: https://soundcloud.com/back-from-void/celldweller-my-disintegration-bfv-remix
-play_soundcloud_embed:
-      src: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/971686048&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true
-      artist_href: https://soundcloud.com/back-from-void
-      artist_title: Back From Void
-      song_href: https://soundcloud.com/back-from-void/celldweller-my-disintegration-bfv-remix"
-      song_title: Celldweller - My Disintegration (BFV Remix)
+embed_player:
+  type: soundcloud
+  src: https://soundcloud.com/back-from-void/celldweller-my-disintegration-bfv-remix
 ---
 Here you can write more about a certain release, e.g. tracklist:
 1. Intro

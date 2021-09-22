@@ -67,6 +67,7 @@ Structure of `_data/menu.yml`:
 Structure of `_data/metaData.yml`:
 * author: Site Author name
 * logo: relative url to the logo
+* clickToEnlargeImages: boolean value to enable/disable "full-screen" images on click
 * cookies: customize information about site cookies
     * enabled: determine if should show cookies pop-up
     * message: text on cookie pop-up
@@ -83,6 +84,18 @@ Structure of `_data/metaData.yml`:
 Structure of `_data/customs.yml`:
 * custom-css: a list of urls to custom css files
 * custom-js: a list of urls to custom javascript files
+
+## Posts front matter parameters
+
+### Embedding media
+Each post can have it's own associated player. Information on how to embed the player should be described under *embed\_player* parameter. Each player should have at least two parameters: *src* and *type*, where *type* will define on how to fill *src*. Supported types:
+
+* soundcloud - src should be full url to song
+* bandcamp - on a "embed song" option on bandcamp, everything after *EmbeddedPlayer/* in generated code should be put to src parameter in front matter
+* spotify - src should be id of the song. It can be acquired via "copy song link", e.g. for url https://open.spotify.com/track/67IdIp2ij8oqTFsSguvy2I?si=f735480b74414902 the src should be 67IdIp2ij8oqTFsSguvy2I
+* youtube - src should be the *v* uri parameter, e.g. for url https://www.youtube.com/watch?v=dfdruxvE9-0 the src should be dfdruxvE9-0
+* anchor.fm - src is the full episode name (e.g. for URL https://anchor.fm/sucias/episodes/Not-All-Men-e15v6dv src should be Not-All-Men-e15v6dv)
+* audio_file - src should be path to file. Additionaly, required properties are name of the song (it will display in player) and boolean value *is\_relative\_url* (for easy access to files served from the same domain)
 
 ## Contributing
 

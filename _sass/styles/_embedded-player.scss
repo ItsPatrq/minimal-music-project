@@ -1,0 +1,9 @@
+.embedded-player {
+    width: 100%;
+    max-width: 600px;
+    outline: none;
+    border: none;
+    &.hidden {
+        visibility: hidden;
+    }
+}

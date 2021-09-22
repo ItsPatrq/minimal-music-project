@@ -59,26 +59,19 @@
     {% endfor %}
 </p>
 {% endif %}
-{% if include.currPost.play_here %}
-{% include music-player.html audioData=include.currPost.play_here %}
-{% endif %}
-{% if include.currPost.play_soundcloud_embed %}
-<iframe width="100%" height="110" scrolling="no" frameborder="no" allow="autoplay"
-    src="{{ include.currPost.play_soundcloud_embed.src }}"></iframe>
-<div
-    style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-    <a href="{{ include.currPost.play_soundcloud_embed.artist_href }}" title="{{ include.currPost.play_soundcloud_embed.artist_title }}" target="_blank"
-        style="color: #cccccc; text-decoration: none;">{{ include.currPost.play_soundcloud_embed.artist_title }}</a> · <a
-        href="{{ include.currPost.play_soundcloud_embed.song_href }}"
-        title="{{ include.currPost.play_soundcloud_embed.song_title }}" target="_blank"
-        style="color: #cccccc; text-decoration: none;">{{ include.currPost.play_soundcloud_embed.song_title }}</a></div>
-{% endif %}
-{% if include.currPost.play_bandcamp_embed %}
-<iframe style="border: 0; width: 100%; height: 120px;"
-    src="{{ include.currPost.play_bandcamp_embed.src }}" seamless>
-    <a href="{{ include.currPost.play_bandcamp_embed.href }}">{{ include.currPost.play_bandcamp_embed.title }}</a></iframe>
-{% endif %}
-{% if include.currPost.play_anchorFm_embed %}
-<iframe src="{{ include.currPost.play_anchorFm_embed.src }}"
-    height="102px" width="400px" frameborder="0" scrolling="no">
+
+{% if include.currPost.embed_player %}
+    {% if include.currPost.embed_player.type ==	"audio_file" %}
+        {% include music-player.html audioData=include.currPost.embed_player %}
+    {% else %}
+        <iframe
+            class="embedded-player hidden"
+            givenSrc="{{include.currPost.embed_player.src}}"
+            type="{{include.currPost.embed_player.type}}"
+            allow="encrypted-media; picture-in-picture"
+            height="80"
+            frameborder="0"
+            scrolling="no">
+        </iframe>
+    {% endif %}
 {% endif %}
