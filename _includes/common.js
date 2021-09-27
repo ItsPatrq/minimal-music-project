@@ -44,6 +44,8 @@
                     return rt(`https://open.spotify.com/embed/track/${src}`, 80);
                 case "spotifyalbum":
                     return rt(`https://open.spotify.com/embed/album/${src}`, 80);
+                case "spotifyplaylist":
+                    return rt(`https://open.spotify.com/embed/playlist/${src}`, 80);
                 case "spotifyepisode":
                     return rt(`https://open.spotify.com/embed/episode/${src}`, 152);
                 case "spotifyshow":

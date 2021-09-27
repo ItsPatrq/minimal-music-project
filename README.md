@@ -97,8 +97,9 @@ Each post can have it's own associated player. Information on how to embed the p
 * bandcamp - on a "embed song" option on bandcamp, everything after *EmbeddedPlayer/* in generated code should be put to src parameter in front matter
 * spotify - src should be id of the song. It can be acquired via "copy song link", e.g. for url https://open.spotify.com/track/67IdIp2ij8oqTFsSguvy2I?si=f735480b74414902 the src should be 67IdIp2ij8oqTFsSguvy2I
 * spotifyalbum - same as "spotify", but src id of an album
-* spotifyepisode - same as "spotify", but src id of an podcast episode
-* spotifyshow - same as "spotify", but src if of an podcast serie (show)
+* spotifyplaylist - same as "spotify", but src id of a playlist
+* spotifyepisode - same as "spotify", but src id of a podcast episode
+* spotifyshow - same as "spotify", but src if of a podcast serie (show)
 * youtube - src should be the *v* uri parameter, e.g. for url https://www.youtube.com/watch?v=dfdruxvE9-0 the src should be dfdruxvE9-0
 * anchor.fm - src is the full episode name (e.g. for URL https://anchor.fm/sucias/episodes/Not-All-Men-e15v6dv src should be Not-All-Men-e15v6dv)
 * audio_file - src should be path to file. Additionaly, required properties are name of the song (it will display in player) and boolean value *is\_relative\_url* (for easy access to files served from the same domain)
