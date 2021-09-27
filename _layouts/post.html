@@ -10,7 +10,9 @@ layout: default
             {% if page.image %}
                 <figure class="post-cover">
             <!-- TODO: Images for diffrent screen size -->
-                    <img click-to-enlarge src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" class="post-cover_image" />
+                    <div class="click-to-enlarge">
+                        <img click-to-enlarge src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" class="post-cover_image" />
+                    </div>
                 </figure>
             {% endif %}
         </header>

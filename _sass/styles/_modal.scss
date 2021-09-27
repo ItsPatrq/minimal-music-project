@@ -1,6 +1,6 @@
 .modal {
     &__picture-zoomed {
-        background-color: RGBA(0,0,0,0.5);
+        background-color: rgba(0,0,0,0.5);
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto;
@@ -11,9 +11,13 @@
         top: 0;
         left: 0;
         cursor: zoom-out;
-        transition: all 0.4s ease-in-out 0.2s;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 1;
         @include mobile {
             background-size: contain;
+        }
+        &.hidden {
+            opacity: 0;
         }
     }
 }

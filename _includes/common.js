@@ -4,16 +4,20 @@
     }
     window.addEventListener("load", () => {
         // #region click to enlarge images 
-        const images = document.querySelectorAll("img[click-to-enlarge]");
-        images.forEach(img => {
+        const imageWrappers = document.querySelectorAll(".click-to-enlarge");
+        imageWrappers.forEach(imageWrapper => {
+            const img = imageWrapper.getElementsByTagName("img")[0];
             {% if site.data.metaData.clickToEnlargeImages %}
             img.addEventListener("click", () => {
                 const src = img.attributes.getNamedItem("src");
                 const modal = document.createElement("div");
                 const removeModal = function() {
-                    document.body.removeChild(modal);
+                    modal.classList.add("hidden");
+                    setTimeout(() => {
+                        document.body.removeChild(modal);
+                    }, 200);
                 };
-                modal.classList.add("modal__picture-zoomed");
+                modal.classList.add("modal__picture-zoomed", "hidden");
                 modal.style.backgroundImage = `URL("${src.value}")`;
                 modal.addEventListener("click", removeModal);
                 document.body.append(modal);
@@ -21,7 +25,10 @@
                     if (e.key === 'Escape') {
                         removeModal();
                     }
-                }, {once : true})
+                }, {once : true});
+                setTimeout(() => {
+                    modal.classList.remove("hidden");
+                }, 0);
             });
             {% else %}
             img.removeAttribute("click-to-enlarge");

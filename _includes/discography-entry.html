@@ -2,7 +2,9 @@
     <header>
         <figure class="discography-album_cover-wrapper">
             <div class="discography-album_cover">
-                <img click-to-enlarge src="{{ include.currPost.image | relative_url }}" alt="{{ page.image_alt }}" />
+                <div class="click-to-enlarge">
+                    <img click-to-enlarge src="{{ include.currPost.image | relative_url }}" alt="{{ page.image_alt }}" />
+                </div>
             </div>
         </figure>
     </header>
