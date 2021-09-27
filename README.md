@@ -53,46 +53,52 @@ This theme uses pager plugin  `jekyll-paginate-v2` for pagination and `jekyll-se
 Configuration via .yml files
 
 Structure of `_data/menu.yml`:
-* menu_pages: a list of items in menu. Each item contains information:
-    * title: Menu position title
-    * url: URL for href
-    * category: unique identifier of category. Used to determine which menu item is selected
-    * tooltip: Tooltip for menu item
-* menu_contacts: a list of items to be displayed for a contact section in menu
-    * faicon: FavIcon to be displayed in menu
-    * url: URL for href
-    * target: target value of \<a> tag
 
+* menu_pages: a list of items in menu. Each item contains information:
+  * title: Menu position title
+  * url: URL for href
+  * category: unique identifier of category. Used to determine which menu item is selected
+  * tooltip: Tooltip for menu item
+* menu_contacts: a list of items to be displayed for a contact section in menu
+  * faicon: FavIcon to be displayed in menu
+  * url: URL for href
+  * target: target value of \<a> tag
 
 Structure of `_data/metaData.yml`:
+
 * author: Site Author name
 * logo: relative url to the logo
 * clickToEnlargeImages: boolean value to enable/disable "full-screen" images on click
 * cookies: customize information about site cookies
-    * enabled: determine if should show cookies pop-up
-    * message: text on cookie pop-up
-    * agreeButtonText: text on agree button
-    * disagreeButtonText: text on disagree button
-    * agreeButtonFnName: function in the `window` scope to execute on cookie agree
-    * disagreeButtonFnName: function in the `window` scope to execute on cookie disagree
-    * header: title of the pop-up window
-    * consent: list of objects that will be rendered on a site with "cookies" layout for acceptance. Each object needs to have:
-        * name: bolded on render
-        * description: description of the cookie
-        * cookieName: under what name it will be saved in the local storage (selected checkbox as "true", unselected as "false")
+  * enabled: determine if should show cookies pop-up
+  * message: text on cookie pop-up
+  * agreeButtonText: text on agree button
+  * disagreeButtonText: text on disagree button
+  * agreeButtonFnName: function in the `window` scope to execute on cookie agree
+  * disagreeButtonFnName: function in the `window` scope to execute on cookie disagree
+  * header: title of the pop-up window
+  * consent: list of objects that will be rendered on a site with "cookies" layout for acceptance. Each object needs to have:
+    * name: bolded on render
+    * description: description of the cookie
+    * cookieName: under what name it will be saved in the local storage (selected checkbox as "true", unselected as "false")
 
 Structure of `_data/customs.yml`:
+
 * custom-css: a list of urls to custom css files
 * custom-js: a list of urls to custom javascript files
 
 ## Posts front matter parameters
 
 ### Embedding media
+
 Each post can have it's own associated player. Information on how to embed the player should be described under *embed\_player* parameter. Each player should have at least two parameters: *src* and *type*, where *type* will define on how to fill *src*. Supported types:
 
 * soundcloud - src should be full url to song
 * bandcamp - on a "embed song" option on bandcamp, everything after *EmbeddedPlayer/* in generated code should be put to src parameter in front matter
 * spotify - src should be id of the song. It can be acquired via "copy song link", e.g. for url https://open.spotify.com/track/67IdIp2ij8oqTFsSguvy2I?si=f735480b74414902 the src should be 67IdIp2ij8oqTFsSguvy2I
+* spotifyalbum - same as "spotify", but src id of an album
+* spotifyepisode - same as "spotify", but src id of an podcast episode
+* spotifyshow - same as "spotify", but src if of an podcast serie (show)
 * youtube - src should be the *v* uri parameter, e.g. for url https://www.youtube.com/watch?v=dfdruxvE9-0 the src should be dfdruxvE9-0
 * anchor.fm - src is the full episode name (e.g. for URL https://anchor.fm/sucias/episodes/Not-All-Men-e15v6dv src should be Not-All-Men-e15v6dv)
 * audio_file - src should be path to file. Additionaly, required properties are name of the song (it will display in player) and boolean value *is\_relative\_url* (for easy access to files served from the same domain)

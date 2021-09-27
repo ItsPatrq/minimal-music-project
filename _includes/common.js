@@ -42,6 +42,12 @@
                     return rt(`https://bandcamp.com/EmbeddedPlayer/${src}`, 125);
                 case "spotify":
                     return rt(`https://open.spotify.com/embed/track/${src}`, 80);
+                case "spotifyalbum":
+                    return rt(`https://open.spotify.com/embed/album/${src}`, 80);
+                case "spotifyepisode":
+                    return rt(`https://open.spotify.com/embed/episode/${src}`, 152);
+                case "spotifyshow":
+                    return rt(`https://open.spotify.com/embed/show/${src}`, 152);
                 case "youtube":
                     return rt(`https://www.youtube.com/embed/${src}`, 350);
                 case "anchor.fm":
@@ -54,6 +60,7 @@
             const givenSrc = player.getAttribute("givenSrc");
             const type = player.getAttribute("type");
             const { src, height } = getParamsByPlayerType(givenSrc, type);
+            console.log(src, height, type)
             player.setAttribute("src", src);
             player.setAttribute("height", height);
             player.classList.remove("hidden");
