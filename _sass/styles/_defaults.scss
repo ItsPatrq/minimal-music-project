@@ -109,6 +109,7 @@ img {
     box-shadow: 0 0px 3px rgba(0,0,0,0.3);
     position: relative;
     width: fit-content;
+    width: -moz-fit-content;
     margin: auto;
     
     &::after {

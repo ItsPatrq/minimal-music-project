@@ -69,7 +69,6 @@
             const givenSrc = player.getAttribute("givenSrc");
             const type = player.getAttribute("type");
             const { src, height } = getParamsByPlayerType(givenSrc, type);
-            console.log(src, height, type)
             player.setAttribute("src", src);
             player.setAttribute("height", height);
             player.classList.remove("hidden");

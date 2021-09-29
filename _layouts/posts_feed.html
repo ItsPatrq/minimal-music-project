@@ -24,7 +24,18 @@ category: home
             <section>
                 <figure>
                     <div class="click-to-enlarge">
-                        <img src="{{ post.image | relative_url }}" alt="{{ page.image_alt }}" class="post-feed_image" />
+                        <img
+                            click-to-enlarge 
+                            {% if post.image_alt %}
+                            alt="{{ post.image_alt }}"
+                            {% endif %}
+                            class="post-feed_image"
+                            src="{{ post.image | relative_url }}"
+                            {% if post.responsiveImage %}
+                            srcset="{% for img in post.responsiveImage %}{{ img.src | relative_url }} {{ img.size }}w{% if forloop.last == false %},{% endif %}{% endfor %}"
+                            sizes="30vw"
+                            {% endif %}
+                        />
                     </div>
                 </figure>
                 <p>

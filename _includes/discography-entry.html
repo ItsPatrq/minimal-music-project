@@ -3,7 +3,18 @@
         <figure class="discography-album_cover-wrapper">
             <div class="discography-album_cover">
                 <div class="click-to-enlarge">
-                    <img click-to-enlarge src="{{ include.currPost.image | relative_url }}" alt="{{ page.image_alt }}" />
+                    <img
+                        click-to-enlarge 
+                        {% if include.currPost.image_alt %}
+                        alt="{{ include.currPost.image_alt }}"
+                        {% endif %}
+                        class="include.currPost-feed_image"
+                        src="{{ include.currPost.image | relative_url }}"
+                        {% if include.currPost.responsiveImage %}
+                        srcset="{% for img in include.currPost.responsiveImage %}{{ img.src | relative_url }} {{ img.size }}w{% if forloop.last == false %},{% endif %}{% endfor %}"
+                        sizes="30vw"
+                        {% endif %}
+                    />
                 </div>
             </div>
         </figure>

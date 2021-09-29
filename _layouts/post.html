@@ -2,16 +2,24 @@
 layout: default
 ---
 <div class="post">
-
     <div class="content-container {{ page.category }}">
         
         <header>
             <h1>{{ page.title }}</h1>
             {% if page.image %}
                 <figure class="post-cover">
-            <!-- TODO: Images for diffrent screen size -->
                     <div class="click-to-enlarge">
-                        <img click-to-enlarge src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" class="post-cover_image" />
+                        <img
+                            click-to-enlarge 
+                            {% if page.image_alt %}
+                            alt="{{ page.image_alt }}"
+                            {% endif %}
+                            class="post-cover_image"
+                            src="{{ page.image | relative_url }}"
+                            {% if page.responsiveImage %}
+                            srcset="{% for img in page.responsiveImage %}{{ img.src | relative_url }} {{ img.size }}w{% if forloop.last == false %},{% endif %}{% endfor %}"
+                            {% endif %}
+                        />
                     </div>
                 </figure>
             {% endif %}

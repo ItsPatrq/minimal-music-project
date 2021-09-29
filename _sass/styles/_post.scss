@@ -6,9 +6,14 @@
     @include mobile{
         font-size: 1em;
     }
+    .post-cover {
+        img {
+            min-width: 90px;
+            min-height: 90px;
+        }
+    }
     figure {
         margin: 0;
-        width: 100%;
         margin-top: 0.5em;
         margin-bottom: 0.5em;
         margin-left: -0.5em;

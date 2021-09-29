@@ -89,6 +89,14 @@ Structure of `_data/customs.yml`:
 
 ## Posts front matter parameters
 
+### Images
+There are two parameters responsible for displaying images: *image* and *responsiveImage*. The first one should have string value equal to the relative path to the image to display in a post (and post-feed / discography preview) if *responsiveImage* is not set. This path will always be used for *clickToEnlargeImages* functionality too. The *responsiveImage* is an array of objects that will be transpiled to img in DOM property *srcset*. Each object should contain two properties:
+
+* *src* - path to the file
+* *size* - image's intrinsic width in pixels
+
+It's recommended to use *responsiveImage* for responsible image loading.
+
 ### Embedding media
 
 Each post can have it's own associated player. Information on how to embed the player should be described under *embed\_player* parameter. Each player should have at least two parameters: *src* and *type*, where *type* will define on how to fill *src*. Supported types:
