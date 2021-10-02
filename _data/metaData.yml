@@ -13,6 +13,7 @@ cookies:
     - name: Google Analytics
       description: some description describing the purpose of this consent as well as what it will collect and where send
       cookieName: GA
-    - name: Some other cookie
+    - name: Some other cookie that is always true
       description: some description describing the purpose of this consent as well as what it will collect and where send
       cookieName: SA
+      alwaysAgree: true

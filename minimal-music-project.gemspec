@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "minimal-music-project"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["Patryk Bieszke"]
   spec.email         = ["bieszke.patryk@gmail.com"]
 

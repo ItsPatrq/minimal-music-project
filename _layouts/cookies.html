@@ -20,7 +20,8 @@ layout: default
     const consents = eval('{{ site.data.metaData.cookies.consent | jsonify }}');
     consents.forEach(consent => {
         const element = document.getElementById(consent.name);
-        element.checked = storageType.getItem(consent.cookieName) === "true";
+        element.checked = storageType.getItem(consent.cookieName) === "true" || consent.alwaysAgree;
+        element.disabled = consent.alwaysAgree;
         element.addEventListener("click", () => {
             storageType.setItem(consent.cookieName, element.checked);
         });

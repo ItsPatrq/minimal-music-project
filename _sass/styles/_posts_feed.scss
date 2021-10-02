@@ -8,6 +8,7 @@ $image-dim: 192px;
     align-items: flex-start;
     color: $p_text;
     hr {
+        margin-bottom: 0.25em;
         @include mobile {
             &:first-of-type {
                 margin-top: 0;
