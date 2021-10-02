@@ -81,6 +81,7 @@ Structure of `_data/metaData.yml`:
     * name: bolded on render
     * description: description of the cookie
     * cookieName: under what name it will be saved in the local storage (selected checkbox as "true", unselected as "false")
+    * alwaysAgree: used for cookies, that cannot be disabled. This will make this consent appear on the "cookies" layout with checked and disabled checkbox. It does not add this cookie under *name* to localStorage
 
 Structure of `_data/customs.yml`:
 
