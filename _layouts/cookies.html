@@ -25,5 +25,6 @@ layout: default
         element.addEventListener("click", () => {
             storageType.setItem(consent.cookieName, element.checked);
         });
+        storageType.setItem("interacted_with_cookies_banner", true);
     });
 </script>
