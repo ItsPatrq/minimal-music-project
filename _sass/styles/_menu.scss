@@ -19,39 +19,43 @@
         width: 100%;
         max-height: $mobile-menu-height;
     }
+    &.expanded--visible {
+        @include mobile {
+            .navigation {
+                opacity: 1;
+            }
+            .menu-contact {
+                opacity: 1;
+            }
+        }
+    }
     &.expanded {
         z-index: 10;
         .menu-top_expand  {
-                .bar_top {
-                    -webkit-transform: rotate(-45deg) translate(-8px, 8px);
-                    transform: rotate(-45deg) translate(-8px, 8px);
-                  }
-                  
-                  .bar_middle {opacity: 0;}
-                  
-                  .bar_bottom {
-                    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-                    transform: rotate(45deg) translate(-8px, -8px);
-              }
-          }
-          .navigation {
-            @include mobile {
-                display: block;
-                position: fixed;
-                left: 0;
-                top: $mobile-menu-height;
-                height: calc(100% - #{$mobile-menu-height});
-                width: 100%;
-                background-color: $white;
-                padding-left: 2em;
+            .bar_top {
+                -webkit-transform: rotate(-45deg) translate(-8px, 8px);
+                transform: rotate(-45deg) translate(-8px, 8px);
+                }
+                
+                .bar_middle {opacity: 0;}
+                
+                .bar_bottom {
+                -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                transform: rotate(45deg) translate(-8px, -8px);
             }
-          }
-          .menu-contact {
-              display: flex;
-              position: fixed;
-              bottom: 0.5em;
-              left: 1em;
-          }
+        }
+        @include mobile {
+            .navigation {
+                display: block;
+            }
+            .menu-contact {
+                display: flex;
+                position: fixed;
+                bottom: 0.5em;
+                left: 1em;
+            }
+        }
+
       }
     &-top {
         box-sizing: border-box;
@@ -130,8 +134,17 @@
     }
 
     .navigation {
+        transition: opacity 0.3s ease-in-out;
         @include mobile {
             display: none;
+            opacity: 0;
+            position: fixed;
+            left: 0;
+            top: $mobile-menu-height;
+            height: calc(100% - #{$mobile-menu-height});
+            width: 100%;
+            background-color: $white;
+            padding-left: 2em;
         }
     }
 
@@ -140,8 +153,10 @@
         justify-content:left;
         margin-bottom: 0.6em;
         flex-wrap: wrap;
+        transition: opacity 0.3s ease-in-out;
         @include mobile {
             display: none;
+            opacity: 0;
         }
         a {
             color: $p_text;

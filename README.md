@@ -69,6 +69,7 @@ Structure of `_data/metaData.yml`:
 * author: Site Author name
 * logo: relative url to the logo
 * clickToEnlargeImages: boolean value to enable/disable "full-screen" images on click
+* lang: lang property of HTML.
 * cookies: customize information about site cookies
   * enabled: determine if should show cookies pop-up
   * message: text on cookie pop-up

@@ -11,10 +11,17 @@
         top: 0;
         left: 0;
         cursor: zoom-out;
-        transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
         opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @include mobile {
             background-size: contain;
+        }
+        &--image {
+            max-height: 96vh;
+            max-width: 96vw;
         }
         &.hidden {
             opacity: 0;

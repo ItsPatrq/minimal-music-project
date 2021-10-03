@@ -1,14 +1,28 @@
 (function () {
     window.toggleExpander = function toggleExpander(x) {
-        document.getElementsByClassName("menu")[0].classList.toggle("expanded");
-    }
+        const menu = document.getElementsByClassName("menu")[0];
+        const navigation = document.getElementsByClassName("navigation")[0];
+        if (menu.classList.contains('expanded--visible')) {
+            menu.classList.toggle('expanded--visible');
+            navigation.addEventListener('transitionend', function(e) {
+                menu.classList.toggle("expanded");
+              }, {
+                capture: false,
+                once: true,
+                passive: false
+              });
+        } else {
+            menu.classList.toggle("expanded");
+            setTimeout(() => menu.classList.toggle('expanded--visible'), 20);
+        }
+    };
     window.addEventListener("load", () => {
         // #region click to enlarge images 
         const imageWrappers = document.querySelectorAll(".click-to-enlarge");
         imageWrappers.forEach(imageWrapper => {
-            const img = imageWrapper.getElementsByTagName("img")[0];
             {% if site.data.metaData.clickToEnlargeImages %}
-            img.addEventListener("click", () => {
+            imageWrapper.addEventListener("click", () => {
+                const img = imageWrapper.getElementsByTagName("img")[0];
                 const src = img.attributes.getNamedItem("src");
                 const modal = document.createElement("div");
                 const removeModal = function() {
@@ -17,9 +31,13 @@
                         document.body.removeChild(modal);
                     }, 200);
                 };
+                const newImage = document.createElement("img");
+                newImage.classList.add("modal__picture-zoomed--image");
+                newImage.setAttribute("src", src.value);
                 modal.classList.add("modal__picture-zoomed", "hidden");
-                modal.style.backgroundImage = `URL("${src.value}")`;
+                // modal.style.backgroundImage = `URL("${src.value}")`;
                 modal.addEventListener("click", removeModal);
+                modal.append(newImage);
                 document.body.append(modal);
                 document.body.addEventListener("keyup", e => {
                     if (e.key === 'Escape') {
