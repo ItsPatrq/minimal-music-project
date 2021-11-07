@@ -16,6 +16,15 @@
             img {
                 max-height: 20vw;
             }
+            @include mobile {
+                width: 40vw;
+                height: 40vw;
+                img {
+                    width: 40vw;
+                    height: 40vw;
+                    max-height: 40vw;
+                }
+            }
         }
         p, a {
             font-size: 0.9em;
