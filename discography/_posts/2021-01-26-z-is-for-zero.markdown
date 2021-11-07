@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Z is for Zero
-description: This is description of a post. It will appear in the page of it's category with the description shown. Clicking each of them will redirect to the page of the post, the same with clicking "Read More"
+description: This is description of a post. It will appear in the page of it's category with the description or excerpt shown. Clicking each of them will redirect to the page of the post, the same with clicking "Read More"
 image: assets/img/z-is-for-zero.png
 responsiveImage:
   - src: assets/img/300.png

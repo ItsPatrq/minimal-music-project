@@ -91,7 +91,12 @@ Structure of `_data/customs.yml`:
 
 ## Posts front matter parameters
 
+### Description / excerpt
+
+In the post feed / discography each entry will be shown with a text. This text will contain either the content of "description" property from front matter, or  [excerpt](https://jekyllrb.com/docs/posts/#post-excerpts) if the description property is missing.
+
 ### Images
+
 There are two parameters responsible for displaying images: *image* and *responsiveImage*. The first one should have string value equal to the relative path to the image to display in a post (and post-feed / discography preview) if *responsiveImage* is not set. This path will always be used for *clickToEnlargeImages* functionality too. The *responsiveImage* is an array of objects that will be transpiled to img in DOM property *srcset*. Each object should contain two properties:
 
 * *src* - path to the file

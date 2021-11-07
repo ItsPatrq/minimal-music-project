@@ -4,8 +4,9 @@ title: Example post 2 title should be long enough, to be a small description as 
 category: home
 image: assets/img/post-2.jpg
 image_alt: Post image cover
-description: This is description of a post. It will appear in the page of it's category with the description shown. Clicking each of them will redirect to the page of the post. 
 ---
+This is excerpt of a post. It will appear in the page of it's category with the description or excerpt shown. Clicking each of them will redirect to the page of the post.
+
 [Jekyll](https://jekyllrb.com/) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur turpis nec tortor sagittis, in tincidunt lectus iaculis. Sed tempor ligula ac nulla dictum, quis luctus tortor pretium. Suspendisse vitae nibh id sapien tempus posuere eu id ante. Fusce nec neque nisl. Suspendisse velit elit, euismod et lacus a, commodo mollis ligula. Duis non nibh gravida, interdum tellus sed, aliquam libero. Ut et tempor velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
 Aliquam tempor porttitor mi. Aliquam et sapien faucibus, mattis purus sed, malesuada urna. Ut eget enim urna. Duis tempus est vel tincidunt luctus. Nunc commodo ante nec orci scelerisque, eu lobortis massa fermentum. Nunc sagittis eros at sapien volutpat aliquet. Donec posuere efficitur laoreet. Ut ornare tellus ut ipsum hendrerit, vitae varius ante pharetra. Suspendisse fringilla leo erat, dignissim auctor ex ultrices a. Sed ultrices blandit eros. Pellentesque volutpat ultrices sem, vel semper enim fermentum eu. Nulla eget eros ipsum. Sed hendrerit et arcu vitae pulvinar. Vivamus facilisis, eros eu gravida rhoncus, enim felis suscipit leo, vitae lacinia magna nisl hendrerit est. Cras eget blandit ante. Aenean tincidunt blandit lacus, vitae porta ipsum viverra et.

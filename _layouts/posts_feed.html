@@ -39,7 +39,11 @@ category: home
                     </div>
                 </figure>
                 <p>
+                    {% if post.description %}
                     {{ post.description }}
+                    {% else %}
+                    {{ post.excerpt | strip_html }}
+                    {% endif %}
                 </p>
             </section>
             {% include read-more.html currPost=post %}

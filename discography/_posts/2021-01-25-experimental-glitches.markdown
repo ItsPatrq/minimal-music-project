@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Experimental Glitches
-description: This is description of a post. It will appear in the page of it's category with the description shown. Clicking each of them will redirect to the page of the post, the same with clicking "Read More"
+description: This is description of a post. It will appear in the page of it's category with the description or excerpt shown. Clicking each of them will redirect to the page of the post, the same with clicking "Read More"
 image: assets/img/Experimental-Glitches-Cover.png
 type: EP
 play:
