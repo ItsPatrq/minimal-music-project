@@ -7,6 +7,10 @@
   <img height="20" src="https://www.ko-fi.com/img/githubbutton_sm.svg"
     alt="Donate (Ko-fi)" />
 </a>
+<a href="https://jekyll-themes.com">
+    <img src="https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg" height="20" alt="Jekyll Themes Shield" loading="lazy">
+</a>
+
 
 minimal-music-project is a flexible, extendable Jekyll theme. With this theme it's plain simple to create a good looking website for a music band with all the required components to list all releases and news. Demo is available [here](https://minimal-music-project.netlify.app/).
 
