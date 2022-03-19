@@ -1,9 +1,9 @@
-<h1><a href="https://github.com/ItsMeaga1n/minimal-music-project/"><img src="https://raw.githubusercontent.com/ItsMeaga1n/minimal-music-project/master/assets/img/favicon.ico" height="21" alt="minimal-categorized logo" /> minimal-music-project Jekyll theme </h1></a>
+<h1><a href="https://github.com/ItsPatrq/minimal-music-project/"><img src="https://raw.githubusercontent.com/ItsPatrq/minimal-music-project/master/assets/img/favicon.ico" height="21" alt="minimal-categorized logo" /> minimal-music-project Jekyll theme </h1></a>
 
-[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/itsmeaga1n/minimal-music-project/master/LICENSE.txt)
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/itspatrq/minimal-music-project/master/LICENSE.txt)
 [![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.9-blue.svg)](https://jekyllrb.com/)
 [![Gem Version](https://badge.fury.io/rb/minimal-music-project.svg)](https://badge.fury.io/rb/minimal-music-project)
-<a href="https://ko-fi.com/itsmeaga1n">
+<a href="https://ko-fi.com/itspatrq">
   <img height="20" src="https://www.ko-fi.com/img/githubbutton_sm.svg"
     alt="Donate (Ko-fi)" />
 </a>
@@ -14,7 +14,7 @@
 
 minimal-music-project is a flexible, extendable Jekyll theme. With this theme it's plain simple to create a good looking website for a music band with all the required components to list all releases and news. Demo is available [here](https://minimal-music-project.netlify.app/).
 
-![layout examples](https://raw.githubusercontent.com/ItsMeaga1n/minimal-music-project/master/screenshot.png)
+![layout examples](https://raw.githubusercontent.com/ItsPatrq/minimal-music-project/master/screenshot.png)
 
 ## Installation
 
@@ -43,10 +43,10 @@ There are three ways to install:
         $ gem install minimal-categorized
 
 * As a remote theme (GitHub Pages compatible)
-    
+
     In your Jekyll site's _config.yml remove other themes and add this entry:
     ```
-    remote_theme: ItsMeaga1n/minimal-categorized
+    remote_theme: ItsPatrq/minimal-categorized
     ```
 
 * Forking/directly copying all of the theme files into your project.
@@ -125,7 +125,7 @@ Each post can have it's own associated player. Information on how to embed the p
 
 ## Contributing
 
-Bug reports and pull requests are welcome on [GitHub](https://github.com/ItsMeaga1n/minimal-music-project). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on [GitHub](https://github.com/ItsPatrq/minimal-music-project). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 

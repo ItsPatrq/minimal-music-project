@@ -22,9 +22,9 @@
         cookieContainer.classList.add("hidden");
         window.setTimeout(cookieContainer.remove.bind(cookieContainer), 1000);
         storageType.setItem(interactedWithCookiesBanner, true);
-        window.location = "cookies";
+        window.location = `{{ "cookies" | absolute_url }}`;
     }
-    
+
     window.addEventListener("load", () => {
         if(storageType.getItem(interactedWithCookiesBanner) === "true" || window.location.href.indexOf("cookies") !== -1) {
             return;
