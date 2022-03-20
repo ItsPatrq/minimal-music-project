@@ -4,7 +4,7 @@
             <div class="discography-album_cover">
                 <div class="click-to-enlarge">
                     <img
-                        click-to-enlarge 
+                        click-to-enlarge
                         {% if include.currPost.image_alt %}
                         alt="{{ include.currPost.image_alt }}"
                         {% endif %}
@@ -29,8 +29,6 @@
                 </h2>
             </a>
             <p class="discography-album_summary">
-                {{ include.currPost.description }}
-                
                 {% if include.currPost.description %}
                 {{ include.currPost.description }}
                 {% else %}
