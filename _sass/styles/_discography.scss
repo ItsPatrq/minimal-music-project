@@ -7,6 +7,10 @@
         flex-direction: row;
         position: relative;
 
+        &:last-of-type {
+            margin-bottom: 1em;
+        }
+
         @include mobile {
             flex-direction: column;
         }

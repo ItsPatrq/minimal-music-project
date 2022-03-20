@@ -43,7 +43,7 @@
 
     & &-content, & &-metadata {
         background: $white;
-        padding: 0.2em 2rem 1rem 2rem;
+        padding: 0 2rem 1rem 2rem;
         border-radius: 10px;
         @include mobile {
             padding: 0.2em 1.2rem 0.6rem 1.2rem;
@@ -67,8 +67,14 @@
         text-align: left;
         p {
             font-size: 1em;
-            margin-top: 5px;
-            margin-bottom: 5px;
+            margin-top: 0.4em;
+            margin-bottom: 0.4em;
+            &:first-of-type {
+                margin-top: 0;
+            }
+            &:last-of-type {
+                padding-bottom: 1em;
+            }
         }
         a {
             color: $p_text;
