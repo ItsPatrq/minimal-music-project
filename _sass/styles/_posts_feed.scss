@@ -27,6 +27,9 @@ $image-dim: 192px;
     }
     h2 {
         margin-bottom: 0.5em;
+        @include mobile {
+            text-align: center;
+        }
     }
     a {
         line-height: 1.1em;
@@ -51,7 +54,7 @@ $image-dim: 192px;
     figure {
         width: max-content;
         margin: auto;
-        margin-bottom: 0.5em;
+        margin-bottom: 1em;
         max-width: 100%;
     }
 
