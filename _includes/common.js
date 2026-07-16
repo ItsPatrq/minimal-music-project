@@ -18,9 +18,9 @@
     };
     window.addEventListener("load", () => {
         // #region click to enlarge images 
+        {% if site.data.metaData.clickToEnlargeImages %}
         const imageWrappers = document.querySelectorAll(".click-to-enlarge");
         imageWrappers.forEach(imageWrapper => {
-            {% if site.data.metaData.clickToEnlargeImages %}
             imageWrapper.addEventListener("click", () => {
                 const img = imageWrapper.getElementsByTagName("img")[0];
                 const src = img.attributes.getNamedItem("src");
@@ -48,10 +48,8 @@
                     modal.classList.remove("hidden");
                 }, 0);
             });
-            {% else %}
-            img.removeAttribute("click-to-enlarge");
-            {% endif %}
         });
+        {% endif %}
         // #endregion click to enlarge images 
         // #region embedded audio players
         const players = document.querySelectorAll("iframe.embedded-player");
