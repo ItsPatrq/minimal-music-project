@@ -7,8 +7,8 @@ layout: default
     <h2>Consents</h2>
     {% for consent in site.data.metaData.cookies.consent %}
     <fieldset>
-        <input type="checkbox" id="{{ consent.name }}">
-        <label for="{{ consent.name }}">
+        <input type="checkbox" id="consent-{{ consent.cookieName }}">
+        <label for="consent-{{ consent.cookieName }}">
             <strong>{{ consent.name }}</strong>
             {{ consent.description }}
         </label>
@@ -17,14 +17,14 @@ layout: default
 </div>
 <script>
     const storageType = localStorage;
-    const consents = eval('{{ site.data.metaData.cookies.consent | jsonify }}');
+    const consents = {{ site.data.metaData.cookies.consent | jsonify }};
     consents.forEach(consent => {
-        const element = document.getElementById(consent.name);
+        const element = document.getElementById("consent-" + consent.cookieName);
         element.checked = storageType.getItem(consent.cookieName) === "true" || consent.alwaysAgree;
         element.disabled = consent.alwaysAgree;
         element.addEventListener("click", () => {
             storageType.setItem(consent.cookieName, element.checked);
         });
-        storageType.setItem("interacted_with_cookies_banner", true);
     });
+    storageType.setItem("interacted_with_cookies_banner", true);
 </script>

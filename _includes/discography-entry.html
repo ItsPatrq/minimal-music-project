@@ -8,6 +8,7 @@
                         {% if include.currPost.image_alt %}
                         alt="{{ include.currPost.image_alt }}"
                         {% endif %}
+                        loading="lazy"
                         src="{{ include.currPost.image | relative_url }}"
                         {% if include.currPost.responsiveImage %}
                         srcset="{% for img in include.currPost.responsiveImage %}{{ img.src | relative_url }} {{ img.size }}w{% if forloop.last == false %},{% endif %}{% endfor %}"
@@ -20,7 +21,7 @@
     </header>
     <section>
         {% if include.currPost.external_url %}
-        <a href="{{ include.currPost.external_url | relative_url }}" target="_blank">
+        <a href="{{ include.currPost.external_url }}" target="_blank">
             {% else %}
             <a href="{{ include.currPost.url | relative_url }}">
                 {% endif %}

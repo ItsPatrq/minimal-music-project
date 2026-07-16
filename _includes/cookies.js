@@ -4,9 +4,9 @@
     const storageType = localStorage;
     const cookieContainerId = "cookieContainer";
 
-    acceptAllCookieConsent = () => {
+    const acceptAllCookieConsent = () => {
         {% for consent in site.data.metaData.cookies.consent %}
-            eval("storageType.setItem('{{consent.cookieName}}', true);");
+            storageType.setItem('{{consent.cookieName}}', true);
         {% endfor %}
     }
 
@@ -45,12 +45,12 @@
         const cookieAgreeButton = document.createElement("button");
         const cookieButtonContent = document.createTextNode("{{ site.data.metaData.cookies.agreeButtonText }}");
         cookieAgreeButton.appendChild(cookieButtonContent);
-        eval("cookieAgreeButton.onclick = {{ site.data.metaData.cookies.agreeButtonFnName }};");
+        cookieAgreeButton.onclick = window["{{ site.data.metaData.cookies.agreeButtonFnName }}"];
 
         const cookieButtonDisagree = document.createElement("button");
         const cookieButtonDisagreeContent = document.createTextNode("{{ site.data.metaData.cookies.disagreeButtonText }}");
         cookieButtonDisagree.append(cookieButtonDisagreeContent);
-        eval("cookieButtonDisagree.onclick = {{ site.data.metaData.cookies.disagreeButtonFnName }};");
+        cookieButtonDisagree.onclick = window["{{ site.data.metaData.cookies.disagreeButtonFnName }}"];
 
         cookieHeader.append(cookieHeaderContent);
         cookieParagraph.append(cookieParagraphContent);

@@ -13,7 +13,7 @@ category: home
                 <p class="article-date">{{ post.date | date: "%Y-%m-%d" }}</p>
                 <h2>
                     {% if post.external_url %}
-                    <a href="{{ post.external_url | relative_url }}" target="_blank">
+                    <a href="{{ post.external_url }}" target="_blank">
                         {% else %}
                         <a href="{{ post.url | relative_url }}">
                             {% endif %}
@@ -30,6 +30,7 @@ category: home
                             alt="{{ post.image_alt }}"
                             {% endif %}
                             class="post-feed_image"
+                            loading="lazy"
                             src="{{ post.image | relative_url }}"
                             {% if post.responsiveImage %}
                             srcset="{% for img in post.responsiveImage %}{{ img.src | relative_url }} {{ img.size }}w{% if forloop.last == false %},{% endif %}{% endfor %}"
@@ -55,7 +56,7 @@ category: home
                 <p class="article-date">{{ post.date | date: "%Y-%m-%d" }}</p>
                 <h2>
                     {% if post.external_url %}
-                    <a href="{{ post.external_url | relative_url }}" target="_blank">
+                    <a href="{{ post.external_url }}" target="_blank">
                         {% else %}
                         <a href="{{ post.url | relative_url }}">
                             {% endif %}
